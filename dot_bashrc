@@ -1,0 +1,13 @@
+# 非交互式Shell不加载
+[[ $- != *i* ]] && return
+
+# 1. Bash专属别名与提示符
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias c='clear'
+alias vim='nvim'  # Bash专用别名
+PS1='[\u@\h \W]\$ '  # Bash提示符
+
+
+# 3. JetBrains配置
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; [ -f "$___MY_VMOPTIONS_SHELL_FILE" ] && . "$___MY_VMOPTIONS_SHELL_FILE"

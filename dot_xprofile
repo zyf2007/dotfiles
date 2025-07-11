@@ -1,0 +1,6 @@
+# 1. 图形应用高DPI支持（可选）
+export GDK_SCALE=1.0
+export QT_SCALE_FACTOR=1.0
+
+# 2. JetBrains
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; [ -f "$___MY_VMOPTIONS_SHELL_FILE" ] && . "$___MY_VMOPTIONS_SHELL_FILE"

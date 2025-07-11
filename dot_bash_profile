@@ -1,0 +1,2 @@
+# 仅加载Bash交互式配置
+[[ -f ~/.bashrc ]] && . ~/.bashrc
