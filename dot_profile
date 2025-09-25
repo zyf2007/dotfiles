@@ -9,6 +9,7 @@ export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.cargo/bin:$HOME/.dotnet/tools:$PA
 export CARGO_HOME="$HOME/.cargo"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export EDITOR='lvim'
+export GO111MODULE=on
 
 # 3. 代理配置
 
