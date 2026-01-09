@@ -14,6 +14,7 @@ git add . ; git commit -m "init" ; git push
 ### update
 ```bash
 chezmoi add ~/.bashrc
+chezmoi re-add
 chezmoi diff
 chezmoi cd
 git add . ; git commit -m "update" ; git push
