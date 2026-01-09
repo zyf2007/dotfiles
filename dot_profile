@@ -10,6 +10,13 @@ export CARGO_HOME="$HOME/.cargo"
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export EDITOR='lvim'
 export GO111MODULE=on
+export IDF_TOOLS_PATH=$HOME/Code/Env/esp/.espressif
+
+# Android SDK command-line tools
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
+export PATH="$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$PATH"
+export PATH="$ANDROID_SDK_ROOT/platform-tools:$PATH"
+export PATH="$ANDROID_SDK_ROOT/emulator:$PATH"
 
 # 3. 代理配置
 
