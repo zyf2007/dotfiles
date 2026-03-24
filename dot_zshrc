@@ -43,6 +43,7 @@ alias gcc='LC_ALL="zh_CN.UTF-8" gcc'
 alias g++='LC_ALL="zh_CN.UTF-8" g++'
 alias idfac='~/Code/Env/esp/v5.5.1/esp-idf/tools/activate.py'
 alias proxy_sudo='sudo https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
+alias code='code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3'
 # 函数
 function nd() { nohup "$@" & disown; }  # 后台运行程序
 
@@ -50,8 +51,18 @@ function nd() { nohup "$@" & disown; }  # 后台运行程序
 # 6. 工具初始化
 eval $(thefuck --alias)  # 命令纠错
 source /usr/share/doc/pkgfile/command-not-found.zsh  # 命令缺失提示
-
+source /usr/share/nvm/init-nvm.sh
 # 7. 应用特定配置
 ___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
 
 alias gf=gf
+
+# 快速进入或创建 ssh_tmux 会话
+st() {
+  if tmux has-session -t ssh_tmux 2>/dev/null; then
+      tmux attach-session -t ssh_tmux
+        else
+            tmux new-session -s ssh_tmux
+              fi
+              }
+
