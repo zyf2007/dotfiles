@@ -42,20 +42,9 @@ lvim.plugins = {
     end,
   },
   {
-    "HiPhish/nvim-ts-rainbow2", -- 推荐用新版 rainbow2（原作者维护）
-    dependencies = "nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        rainbow = {
-          enable = true,
-          -- 仅对特定语言启用（可选，减少冲突）
-          -- disable = { "js", "javascript" },
-          query = "rainbow-parens",
-          strategy = require("ts-rainbow.strategy.global"),
-        }
-      })
-    end
+    "HiPhish/rainbow-delimiters.nvim",
   },
+
   {
     "tzachar/cmp-tabnine",
     build = "./install.sh",

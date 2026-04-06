@@ -40,7 +40,7 @@ alias rdesk="docker start hbbs;docker start hbbr"
 alias c=clear
 alias tm='if tmux has-session -t default_tmux 2>/dev/null; then tmux attach -t default_tmux; else tmux new-session -s default_tmux; fi'
 alias gcc='LC_ALL="zh_CN.UTF-8" gcc'
-alias g++='LC_ALL="zh_CN.UTF-8" g++'
+alias g++='LC_ALL="zh_CN_kawaii" g++'
 alias idfac='~/Code/Env/esp/v5.5.1/esp-idf/tools/activate.py'
 alias proxy_sudo='sudo https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 alias code='code --ozone-platform-hint=auto --enable-wayland-ime --wayland-text-input-version=3'
@@ -63,6 +63,18 @@ st() {
       tmux attach-session -t ssh_tmux
         else
             tmux new-session -s ssh_tmux
-              fi
-              }
-
+  fi
+}
+codex() {
+  (
+    source ~/.codexkey.sh
+    command codex "$@"
+  )
+}
+claude() {
+  (
+    source ~/.claudekey.sh
+    source ~/.codexkey.sh
+    command claude"$@"
+  )
+}

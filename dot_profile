@@ -11,6 +11,7 @@ export PNPM_HOME="$HOME/.local/share/pnpm"
 export EDITOR='lvim'
 export GO111MODULE=on
 export IDF_TOOLS_PATH=$HOME/Code/Env/esp/.espressif
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Android SDK command-line tools
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
