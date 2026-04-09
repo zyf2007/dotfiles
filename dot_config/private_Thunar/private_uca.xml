@@ -184,9 +184,9 @@ zenity --info --width=600 --height=400 --title=&quot;文件校验和信息&quot;
 	<icon>image-x-generic</icon>
 	<name>PDF 转 PNG</name>
 	<submenu></submenu>
-	<unique-id>1753934983434324-2</unique-id>
-	<command>sh -c &quot;ffmpeg -i %f -vf &apos;scale=1920:-1&apos; -pix_fmt rgb24 &apos;%f-page-%%03d.png&apos;</command>
-	<description>将 PDF 文件转换为 PNG 图像序列（每页一张）</description>
+	<unique-id>1775532000000000-1</unique-id>
+	<command>/home/zyf/Code/ToolScripts/ThunarActions/pdf_to_png_sequence.sh %F</command>
+	<description>将 PDF 文件转换为 PNG 序列（每页一张）</description>
 	<range>*</range>
 	<patterns>*.pdf</patterns>
 	<other-files/>
